@@ -1,7 +1,12 @@
 from random import shuffle
 
-#Class for possible cards. 
 class Card():
+    """Class handles cards in a deck
+
+     Attributes:
+        suits  --  The possible suits in a deck of cards
+        values --  The possible values in a deck of cards
+    """
 
     suits = [('Heart',1), ('Diamond',2), ('Spade',3), ('Club',4)]
     values = [('Ace',11),('Two',2),('Three',3),('Four',4),('Five',5),
@@ -15,6 +20,14 @@ class Card():
 
 #Class handles entities and game logic
 class Entity():
+    """Class handles entities and game logic
+
+     Attributes:
+        bet_account: int     --  holds the players account amount
+        entity_name: string  --  holds the name of the player
+        cards: list          --  holds the cards
+    """
+
 
     def __init__(self, bet_account = 0, entity_name = 'name'):
         """Inits Enitity class with bet_account, entity.name and cards """
@@ -176,7 +189,9 @@ def main():
         house.cards = []
         bet = int(input('How much do you want to bet?'))
         if bet < money:
+            # starts the game
             play_game(player,house,deck,bet)
+            
         else:
             print("You cannot bet more than you have!")
 
