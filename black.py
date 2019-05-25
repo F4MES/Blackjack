@@ -4,8 +4,8 @@ class Card():
     """Class handles cards in a deck
 
      Attributes:
-        suits  --  The possible suits in a deck of cards
-        values --  The possible values in a deck of cards
+        suit       --  The possible suits in a deck of cards
+        card_value --  The possible values in a deck of cards
     """
 
     suits = [('Heart',1), ('Diamond',2), ('Spade',3), ('Club',4)]
