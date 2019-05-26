@@ -113,6 +113,8 @@ def check_winner(player, house, bet):
     elif player.calc_card_value() > house.calc_card_value():
         print(player.entity_name + " won")
         player.deposit(bet)
+    elif player.calc_card_value() == house.calc_card_value():
+        print("Tie!")
     else:
         print('House won')
         player.deposit(-bet)  
@@ -182,8 +184,11 @@ def main():
         main() 
     try:       
         money = int(input('How much do you want to deposit?'))
+        if money <= 0:
+            print("deposit must be bigger than 0, starting over..")
+            main()
     except ValueError:
-        print("Not a valid deposit")
+        print("Not a valid deposit. Starting over..")
         main()
     #creates objects of player and house
     player = Entity(bet_account = money, entity_name = name)
@@ -195,16 +200,16 @@ def main():
         house.cards = []
         try:
             bet = int(input('How much do you want to bet?'))
-            if bet <= player.bet_account:
+            if bet <= player.bet_account and bet > 0:
             # starts the game
                 play_game(player,house,deck,bet) 
             else:
-                print("You cannot bet more than you have!")
+                print("Bet cannot be bigger than what you have, and cannot be 0")
         except ValueError:
             print("Not a valid bet")       
 
-        want_to_stop = input('To stop write stop, to try again press enter')
-        if want_to_stop == "stop":
+        want_to_stop = input('To stop write ¨s¨, to try again press enter')
+        if want_to_stop == "s":
             stop = True
 
     
