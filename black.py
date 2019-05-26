@@ -18,7 +18,6 @@ class Card():
         self.card_value = Card.values[card_value]
         self.suit = Card.suits[suit]
 
-#Class handles entities and game logic
 class Entity():
     """Class handles entities and game logic
 
@@ -178,7 +177,14 @@ def main():
     """Initial setup. Gets player name and how much they wants to deposit, starts game """
     print()
     name = input('What is your name?').capitalize()
-    money = int(input('How much do you want to deposit?'))
+    if name == "":
+        print("You need to type a name")
+        main() 
+    try:       
+        money = int(input('How much do you want to deposit?'))
+    except ValueError:
+        print("Not a valid deposit")
+        main()
     #creates objects of player and house
     player = Entity(bet_account = money, entity_name = name)
     house = Entity(bet_account = 10000000, entity_name = "House")
@@ -187,13 +193,15 @@ def main():
         deck = generate_deck()
         player.cards = []
         house.cards = []
-        bet = int(input('How much do you want to bet?'))
-        if bet < money:
+        try:
+            bet = int(input('How much do you want to bet?'))
+            if bet <= player.bet_account:
             # starts the game
-            play_game(player,house,deck,bet)
-            
-        else:
-            print("You cannot bet more than you have!")
+                play_game(player,house,deck,bet) 
+            else:
+                print("You cannot bet more than you have!")
+        except ValueError:
+            print("Not a valid bet")       
 
         want_to_stop = input('To stop write stop, to try again press enter')
         if want_to_stop == "stop":
