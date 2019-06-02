@@ -1,6 +1,6 @@
 # Blackjack Game
 > Exam project for python elective 2019.
-Tobias Valdemar Schwartzlose
+- Tobias Valdemar Schwartzlose
 
 ## How to install the game:
 * cd to desired folder
