@@ -5,7 +5,7 @@
 ## How to install the game:
 * cd to desired folder
 * $ git clone https://github.com/F4MES/Blackjack.git 
-Or
+* Or
 * Download a zip with the "Clone or download" button top right
 * Unzip
 * Moved to desired location
