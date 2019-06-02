@@ -14,7 +14,6 @@ class Player():
         self.player_name = player_name
         self.cards = []
     
-
     def deposit(self, amount):
         """deposit momey into players account
         
