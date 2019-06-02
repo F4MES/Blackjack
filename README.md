@@ -1,11 +1,11 @@
 # Blackjack Game
-> Exam project for python elective 2019.
-- Tobias Valdemar Schwartzlose
+> Exam project for python elective 2019.    
+  Tobias Valdemar Schwartzlose
 
 ## How to install the game:
 * cd to desired folder
-* $ git clone https://github.com/F4MES/Blackjack.git 
-* -- Or --
+* $ git clone https://github.com/F4MES/Blackjack.git  
+  -- Or --
 * Download a zip with the "Clone or download" button top right
 * Unzip
 * Move to desired location
