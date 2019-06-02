@@ -8,7 +8,7 @@
 * Or
 * Download a zip with the "Clone or download" button top right
 * Unzip
-* Moved to desired location
+* Move to desired location
 
 ## How to run the game in terminal:
 * cd to <YourPath>/Blackjack/Game
