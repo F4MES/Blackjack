@@ -1,5 +1,5 @@
 class Player():
-    """Class handles player and game logic
+    """Class handles player 
 
      Attributes:
         bet_account: int     --  holds the players account amount
@@ -46,6 +46,7 @@ class Player():
             the total value of player or house cards. 
             """
             total_value = 0
+            #multiplying the cards contained by the player or house
             for card in self.cards:
                 total_value += card.value[1]
         
