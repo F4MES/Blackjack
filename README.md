@@ -8,4 +8,4 @@
 ## How to run the game in terminal:
 * cd to <YourPath>/Blackjack/Game
 * run "python blackjack.py"
-* Follow instructions on screen to play.
+* Follow instructions in the terminal to play.
